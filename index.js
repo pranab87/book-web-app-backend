@@ -39,6 +39,10 @@ db.on('disconnected',()=>{
 app.use("/api/user",userRoute);
 app.use("/api/user",userRoute);
 
+app.get("/",(req,res)=>{
+   res.send("API Working")
+})
+
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}`)
