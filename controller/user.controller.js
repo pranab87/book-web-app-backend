@@ -1,6 +1,6 @@
 import User from "../model/user.model.js";
  import bcrypt from "bcryptjs"
-
+//signup logic
 export const signup=async( req,res)=>{
     try{
        const{fullname,email,password}=req.body;
@@ -32,7 +32,7 @@ export const signup=async( req,res)=>{
        res.status(500).json("Internal server error")
     }
 }
-
+//login logic
 export const login=async(req,res)=>{
        try{
           const{email,password}=req.body;
